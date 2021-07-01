@@ -33,8 +33,4 @@ public class PalindromeService {
 //    String url = "https://jsonplaceholder.typicode.com/users";
 
 
-
-
-
-
 }

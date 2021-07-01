@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PalindromeController {
 
     @GetMapping("/hello")
-    public String helloWorld(){
+    public String helloWorld() {
         return "Hello";
     }
 }

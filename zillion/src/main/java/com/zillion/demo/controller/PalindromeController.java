@@ -17,36 +17,40 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 public class PalindromeController {
-      @Autowired
+    @Autowired
     RestTemplate restTemplate;
 
     @GetMapping("/get")
-    public  String  getEmpty(){        return  "Ati";    }
+    public String getEmpty() {
+        return "Ati";
+    }
+
     @GetMapping(value = "/getUser")
 //    @Produces(MediaType.APPLICATION_JSON)
-    public ResponseEntity<?> getUser() throws  Exception{
+    public ResponseEntity<?> getUser() throws Exception {
 
         URI uri = URI.create("https://jsonplaceholder.typicode.com/users");
 //        HttpHeaders headers = new HttpHeaders();
 //        headers.setContentType(MediaType.APPLICATION_JSON);
 //        HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
 //        ResponseEntity<List<User>> responseEntity =  restTemplate.getForObject(uri, User.class);
-            ResponseEntity<List<UserResponse>> responseEntity = restTemplate.exchange(uri,
-                    HttpMethod.GET, null, new ParameterizedTypeReference<List<UserResponse>>() {
-                    });
+        ResponseEntity<List<UserResponse>> responseEntity = restTemplate.exchange(uri,
+                HttpMethod.GET, null, new ParameterizedTypeReference<List<UserResponse>>() {
+                });
 //            User users1 =  responseEntity.getBody();
-            return ResponseEntity.status(HttpStatus.OK).body(responseEntity.getBody());
-        }
-        //costing
+        return ResponseEntity.status(HttpStatus.OK).body(responseEntity.getBody());
+    }
+
+    //costing
     @GetMapping("/getUser/{id}")
     public User getUserByID(@PathVariable int id) {
         URI uri = URI.create("https://jsonplaceholder.typicode.com/users");
         ResponseEntity<List<User>> responseEntity = restTemplate.exchange(uri, HttpMethod.GET, null,
                 new ParameterizedTypeReference<List<User>>() {
-                       });
-           User user = responseEntity.getBody().get(id);
+                });
+        User user = responseEntity.getBody().get(id);
 
-          return user;
+        return user;
     }
 
 }

@@ -51,15 +51,15 @@ public class Test {
 //        return res;
 //    }
 
-    public int countCharacters(char[] chars , String name){
-             StringBuilder str = new StringBuilder();
-             char[] a = name.toCharArray();
+    public int countCharacters(char[] chars, String name) {
+        StringBuilder str = new StringBuilder();
+        char[] a = name.toCharArray();
 
         String b = "";
-        for (int i=0; i<=name.length(); i++){
+        for (int i = 0; i <= name.length(); i++) {
 
-          if (chars[i]==a[i]){
-              str=  str + chars[i];
+            if (chars[i] == a[i]) {
+                str = str + chars[i];
             }
             System.out.println(b);
         }
@@ -69,7 +69,7 @@ public class Test {
 
     public static void main(String[] args) {
         String a = "Ataklete";
-        char[] names = {'A','t','k'};
+        char[] names = {'A', 't', 'k'};
         Test ts = new Test();
 //        System.out.println(ts.countCharacters(a, names));
 //        System.out.println("------------------");

@@ -9,14 +9,14 @@ import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "id",
-    "name",
-    "username",
-    "email",
-    "address",
-    "phone",
-    "website",
-    "company"
+        "id",
+        "name",
+        "username",
+        "email",
+        "address",
+        "phone",
+        "website",
+        "company"
 })
 @Generated("jsonschema2pojo")
 public class UserResponse {
@@ -29,13 +29,13 @@ public class UserResponse {
     private String username;
     @JsonProperty("email")
     private String email;
-//    @JsonProperty("address")
+    //    @JsonProperty("address")
 //    private Address address;
     @JsonProperty("phone")
     private String phone;
     @JsonProperty("website")
     private String website;
-//    @JsonProperty("company")
+    //    @JsonProperty("company")
 //    private Company company;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
@@ -129,7 +129,6 @@ public class UserResponse {
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
-
 
 
 }

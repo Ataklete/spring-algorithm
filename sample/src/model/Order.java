@@ -4,8 +4,8 @@ import java.util.Comparator;
 
 public class Order implements Comparator<Order> {
 
-   private String name;
-   private  int age;
+    private String name;
+    private int age;
 
     public Order() {
 
@@ -44,14 +44,15 @@ public class Order implements Comparator<Order> {
         String name2 = o2.getName();
         return name1.compareTo(name2);
     }
+
     @Override
     public String toString() {
         return
                 "name='" + name + '\'' +
-                        ", age=" + age ;
+                        ", age=" + age;
     }
-    static int findSum(String str)
-    {
+
+    static int findSum(String str) {
         // A temporary string
         String temp = "";
 
@@ -62,16 +63,16 @@ public class Order implements Comparator<Order> {
             char ch = str.charAt(i);
 
             // if current character is a digit
-            if (Character.isDigit(ch) || ch=='-') {
+            if (Character.isDigit(ch) || ch == '-') {
                 temp += ch;
                 System.out.println(temp);
             }
-                // if current character is an alphabet
+            // if current character is an alphabet
             else {
                 // increment sum by number found earlier
                 // (if any)
-                int a = 0+Integer.parseInt(temp);
-                System.out.println("a "+ a);
+                int a = 0 + Integer.parseInt(temp);
+                System.out.println("a " + a);
                 sum += a;
 
                 // reset temporary string to empty

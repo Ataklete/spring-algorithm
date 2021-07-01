@@ -1,13 +1,14 @@
 package com.zillion.demo.DTO;
 
 public class User {
-   private  int id;
-   private  String name;
-   private  String count;
+    private int id;
+    private String name;
+    private String count;
 
     public User() {
 
     }
+
     public User(int id, String name, String count) {
         this.id = id;
         this.name = name;
