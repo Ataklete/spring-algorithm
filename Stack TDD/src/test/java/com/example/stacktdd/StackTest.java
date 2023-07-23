@@ -3,6 +3,7 @@ package com.example.stacktdd;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestTemplate;
+import org.junit.jupiter.api.function.Executable;
 
 import java.util.EmptyStackException;
 
@@ -41,7 +42,7 @@ class StackTest {
     @Test()
     //in unit test 4 use (expected = EmptyStackException.class)
     public void pop_ThrowsEmptyStackException_IfStackIsEmpty() {
-        stack.pop();
+        assertThrows(EmptyStackException.class, (Executable) stack.pop());
     }
 
     @Test
